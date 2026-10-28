@@ -4,31 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrés Fara | Tarjeta Digital</title>
+  
+  <!-- Carga de fuentes web (Montserrat como equivalente web universal de Gotham y Plus Jakarta Sans para botones) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    /* Soporte para fuente Gotham local */
+    @font-face {
+      font-family: 'Gotham';
+      src: local('Gotham'), local('Gotham-Book'), local('Gotham-Medium'), local('Gotham Pro');
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f2f2f7;
+      font-family: 'Gotham', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #151618;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
-      color: #1c1c1e;
+      padding: 24px 16px;
+      color: #ffffff;
     }
+
+    /* Fondo de la tarjeta con el color Primario (#202123) */
     .card {
-      background: #ffffff;
-      padding: 36px 24px;
-      border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      background-color: #202123;
+      padding: 38px 24px 34px;
+      border-radius: 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
       text-align: center;
       max-width: 340px;
       width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .avatar-img {
       width: 110px;
       height: 110px;
@@ -36,54 +53,99 @@
       object-fit: cover;
       display: block;
       margin: 0 auto 18px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-      border: 3px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(178, 72, 34, 0.35);
+      border: 3.5px solid #202123;
+      outline: 2.5px solid #b24822; /* Color Secundario */
     }
+
+    /* Nombre con tipografía Gotham */
     h1 {
-      font-size: 22px;
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 24px;
       font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
       margin-bottom: 6px;
     }
-    p {
-      font-size: 14px;
-      color: #636366;
-      margin-bottom: 24px;
-      line-height: 1.4;
+
+    /* Subtítulo con Gotham y color Secundario */
+    .subtitle {
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #b24822;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
+
+    /* Descripción / Bio con tipografía Gotham */
+    .bio {
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
+      color: #c4c5c9;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      padding: 0 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Botón Primario: Guardar contacto */
     .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
       display: block;
       width: 100%;
-      background-color: #007aff;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #202123;
       text-decoration: none;
       padding: 14px 20px;
       border-radius: 14px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
-      margin-bottom: 12px;
-      box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+      letter-spacing: 0.2px;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+      transition: transform 0.15s ease, opacity 0.15s ease;
     }
+
+    .btn:active {
+      transform: scale(0.98);
+      opacity: 0.9;
+    }
+
+    /* Botón Secundario: WhatsApp */
     .btn-secondary {
-      background-color: #25d366;
-      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
-      margin-bottom: 0;
+      background-color: #b24822; /* Color Secundario */
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(178, 72, 34, 0.35);
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <!-- Tu foto subida como foto.jpg -->
     <img src="foto.jpg" alt="Andrés Fara" class="avatar-img">
 
     <h1>Andrés Fara</h1>
-    <p>Consultor de Marca & Marketing</p>
+    <div class="subtitle">Brand Manager & Marketing</div>
 
-    <!-- Descarga directa de la vCard en la agenda -->
-    <a href="contacto.vcf" download class="btn">Guardar contacto</a>
+    <p class="bio">
+      Especialista en desarrollo y consultoría de marca, dirección de marketing y producción audiovisual. Conectando marcas con su audiencia a través de estrategia y diseño.
+    </p>
 
-    <!-- Enlace a tu WhatsApp -->
-    <a href="https://wa.me/51XXXXXXXXX" target="_blank" class="btn btn-secondary">WhatsApp</a>
+    <div class="actions">
+      <!-- Botón para descargar el archivo de contacto a la agenda -->
+      <a href="contacto.vcf" download class="btn">Guardar contacto</a>
+
+      <!-- WhatsApp configurado con tu número -->
+      <a href="https://wa.me/51966440541" target="_blank" class="btn btn-secondary">WhatsApp</a>
+    </div>
   </div>
 
 </body>
