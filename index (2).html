@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrés Fara | Tarjeta Digital</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: local('Gotham'), local('Gotham-Book'), local('Gotham-Medium'), local('Gotham Pro');
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Gotham', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #151618;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px 16px;
+      color: #ffffff;
+    }
+
+    .card {
+      background-color: #202123;
+      padding: 38px 24px 34px;
+      border-radius: 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .avatar-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
+      box-shadow: 0 6px 18px rgba(178, 72, 34, 0.35);
+      border: 3.5px solid #202123;
+      outline: 2.5px solid #b24822;
+    }
+
+    h1 {
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #b24822;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bio {
+      font-family: 'Gotham', 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
+      color: #c4c5c9;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      padding: 0 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: block;
+      width: 100%;
+      background-color: #ffffff;
+      color: #202123;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background-color: #b24822;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(178, 72, 34, 0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="foto.jpg" alt="Andrés Fara" class="avatar-img">
+
+    <h1>Andrés Fara</h1>
+    <div class="subtitle">Brand Manager & Marketing</div>
+
+    <p class="bio">
+      Especialista en desarrollo y consultoría de marca, dirección de marketing y producción audiovisual. Conectando marcas con su audiencia a través de estrategia y diseño.
+    </p>
+
+    <div class="actions">
+      <a href="contacto.vcf" download class="btn">Guardar contacto</a>
+      <a href="https://wa.me/51966440541" target="_blank" class="btn btn-secondary">WhatsApp</a>
+    </div>
+  </div>
+
+</body>
+</html>
